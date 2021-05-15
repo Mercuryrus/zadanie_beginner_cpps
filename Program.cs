@@ -55,13 +55,14 @@ namespace zadanie_1_1
                 Console.Write("Пятизначное число для деления на разряды ");
             } while (!int.TryParse(Console.ReadLine(), out number) && number>0);
 
-            if (number >= 0 && number <= 9999 || number > 100000)
+            if ((number >= 0 && number <= 9999) || number > 100000)
             {
                 Console.WriteLine("Дебилы, блять...(с) Лавров\nЧисло должно быть пятизначным");
             }
             else for (int i = 0; i < 5; i++)
                 {
-                    Console.WriteLine(i + 1 + " цифра: " + Math.Abs(Convert.ToInt32(number / (Math.Pow(10, (4 - i))) % 10)));
+                    number = Math.Abs(number);
+                    Console.WriteLine(i + 1 + " цифра: " + (Convert.ToInt32(number / (Math.Pow(10, (4 - i))) % 10)));
                 }
             Menu();
         }
