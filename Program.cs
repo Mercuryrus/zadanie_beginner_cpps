@@ -11,21 +11,21 @@ namespace zadanie_1_1
         }
         public static void MainMenu()
         {
-            int viborZadanii;
+            int changeTask;
             do
             {
                 Console.Write("Выберите задание:\n 1)Разделение на разряды\n 0)Выдох на себя\n");
-            } while (!int.TryParse(Console.ReadLine(), out viborZadanii));
+            } while (!int.TryParse(Console.ReadLine(), out changeTask));
 
-            switch (viborZadanii)
+            switch (changeTask)
             {
                 case 1:
                     DelenieNaRazryady();
                     break;
-                case (0):
+                default:
                     break;
             }
-        }  
+        }
         public static void Menu()
         {
             int menu;
