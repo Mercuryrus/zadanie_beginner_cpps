@@ -7,6 +7,10 @@ namespace zadanie_1_1
         static void Main()
         {
             Console.WriteLine("Волкам привет, остальным соболезную");
+            MainMenu();
+        }
+        public static void MainMenu()
+        {
             int viborZadanii;
             do
             {
@@ -18,7 +22,28 @@ namespace zadanie_1_1
                 case 1:
                     DelenieNaRazryady();
                     break;
-                case(0):
+                case (0):
+                    break;
+            }
+        }  
+        public static void Menu()
+        {
+            int menu;
+            do
+            {
+                Console.Write("Че дальше делаем?\n 1)Ебани еще раз\n 2)Дай другое задание потыкать\n 3)Выйди нахуй \n");
+            } while (!int.TryParse(Console.ReadLine(), out menu));
+
+
+            switch (menu)
+            {
+                case (1):
+                    DelenieNaRazryady();
+                    break;
+                case (2):
+                    MainMenu();
+                    break;
+                case (3):
                     break;
             }
         }
@@ -29,6 +54,7 @@ namespace zadanie_1_1
             {
                 Console.Write("Пятизначное число для деления на разряды ");
             } while (!int.TryParse(Console.ReadLine(), out number) && number>0);
+
             if (number >= 0 && number <= 9999 || number > 100000)
             {
                 Console.WriteLine("Дебилы, блять...(с) Лавров\nЧисло должно быть пятизначным");
@@ -37,33 +63,9 @@ namespace zadanie_1_1
                 {
                     Console.WriteLine(i + 1 + " цифра: " + Math.Abs(Convert.ToInt32(number / (Math.Pow(10, (4 - i))) % 10)));
                 }
-
             Menu();
         }
 
-        public static void Menu()
-        {
-            int menu;
-            do
-            {
-                    Console.Write("Че дальше делаем?\n 1)Ебани еще раз\n 2)Дай другое задание потыкать\n 3)Выйди нахуй \n");
-            } while (!int.TryParse(Console.ReadLine(), out menu));
-
-            
-            switch(menu)
-            {
-                case (1): 
-                    DelenieNaRazryady();
-                    break;
-                case (2):
-                   Main();
-                    break;
-                case (3):
-                    break;
-            }   
-
-        }
-        
     }
 } 
 
