@@ -31,7 +31,7 @@ namespace zadanie_1_1
             } while (!int.TryParse(Console.ReadLine(), out number) && number>0);
             if (number >= 0 && number <= 9999 || number > 100000)
             {
-                Console.WriteLine("Число должно быть пятизначным");
+                Console.WriteLine("Дебилы, блять...(с) Лавров\nЧисло должно быть пятизначным");
             }
             else for (int i = 0; i < 5; i++)
                 {
@@ -46,7 +46,7 @@ namespace zadanie_1_1
             int menu;
             do
             {
-                    Console.Write("Че дальше делаем?\n 1)ебани еще раз\n 2)Дай другое задание потыкать\n 3)Выйди нахуй \n");
+                    Console.Write("Че дальше делаем?\n 1)Ебани еще раз\n 2)Дай другое задание потыкать\n 3)Выйди нахуй \n");
             } while (!int.TryParse(Console.ReadLine(), out menu));
 
             
