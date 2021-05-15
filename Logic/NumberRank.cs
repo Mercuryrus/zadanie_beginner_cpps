@@ -26,7 +26,7 @@ namespace zadanie_1_1.Logic
             {
                 Console.Write("Пятизначное число для деления на разряды: ");
                 string numberStr = Console.ReadLine();
-                if (!int.TryParse(numberStr, out numberFive) || (numberStr.Length != 5) || (numberStr[0] == '-'))
+                if (!int.TryParse(numberStr, out numberFive) || (Convert.ToString(numberFive).Length != 5) || (numberStr[0] == '-'))
                     continue;
 
                 isContinue = false;
