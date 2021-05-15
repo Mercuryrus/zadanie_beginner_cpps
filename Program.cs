@@ -6,6 +6,7 @@ namespace zadanie_1_1
     {
         static void Main()
         {
+            Console.WriteLine("Волкам привет, остальным соболезную");
             int viborZadanii;
             do
             {
