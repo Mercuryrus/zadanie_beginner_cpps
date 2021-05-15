@@ -7,7 +7,8 @@ namespace zadanie_1_1
         static void Main()
         {
             Console.WriteLine("Волкам привет, остальным соболезную");
-            MainMenu();
+            zadanie_1_1.Menu.MainMenu.GetMainMenu();
+            //MainMenu();
         }
         public static void MainMenu()
         {

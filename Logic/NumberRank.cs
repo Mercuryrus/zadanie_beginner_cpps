@@ -19,14 +19,20 @@ namespace zadanie_1_1.Logic
 
         public static void SetNumber()
         {
-            int number;
-            
+            bool isContinue = true;
+            int numberFive;
+
             do
             {
                 Console.Write("Пятизначное число для деления на разряды: ");
-            } while (!int.TryParse(Console.ReadLine(), out number) && (Convert.ToString(number).Length != 5));
+                string numberStr = Console.ReadLine();
+                if (!int.TryParse(numberStr, out numberFive) || (numberStr.Length != 5) || (numberStr[0] == '-'))
+                    continue;
 
-            _number = number;
+                isContinue = false;
+            } while (isContinue);
+
+            _number = numberFive;
         }
 
         public static void ShowNumber()
