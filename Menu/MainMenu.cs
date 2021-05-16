@@ -32,9 +32,11 @@ namespace zadanie_1_1.Menu
                         break;
                     case ElemMainMenu.numberRank:
                         NumberRankMenu.GetNumberRankMenu();
+                        Console.Clear();
                         break;
                     case ElemMainMenu.distanceConverter:
                         DistanceConverterMenu.GetDisatnceConverterMenu();
+                        Console.Clear();
                         break;
                     default:
                         break;
