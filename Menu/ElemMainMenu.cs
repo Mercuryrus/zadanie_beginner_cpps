@@ -3,6 +3,7 @@
     public enum ElemMainMenu
     {
         exit = 0,
-        numberRank = 1
+        numberRank = 1,
+        distanceConverter = 2
     }
 }
