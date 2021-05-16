@@ -15,7 +15,8 @@ namespace zadanie_1_1.Menu
             do
             {
                 int changeTask = 0;
-                Console.Write("Выберите задание:\n 0) Выход:\n 1) Разделение на разряды:\n Все-остальное) Выдох на себя:\n");
+                Console.Write("Выберите задание:\n 0) Выход:\n 1) Разделение на разряды:" +
+                    "\n 2)Конвертер расстоянния \n Все-остальное) Выдох на себя:\n");
                 string elemMenuStr = Console.ReadLine();
 
                 if (!int.TryParse(elemMenuStr, out changeTask))
@@ -31,6 +32,9 @@ namespace zadanie_1_1.Menu
                         break;
                     case ElemMainMenu.numberRank:
                         NumberRankMenu.GetNumberRankMenu();
+                        break;
+                    case ElemMainMenu.distanceConverter:
+                        DistanceConverterMenu.GetDisatnceConverterMenu();
                         break;
                     default:
                         break;
