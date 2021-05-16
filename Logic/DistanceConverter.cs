@@ -39,24 +39,24 @@ namespace zadanie_1_1.Logic
         {
             if (_distance < 0)
             {
-                Console.WriteLine("Дистанция не может быть отрицательной!");
+                Console.WriteLine("Дистанция не может быть отрицательной!\n");
                 return;
             }
 
-            Console.WriteLine("Введенное расстояние: " + _distance + " м.");
+            Console.WriteLine("Введенное расстояние: " + _distance + " м.\n");
         }
 
         public static void ShowConvertedDistanceCM()
         {
             if (_distance < 0)
             {
-                Console.WriteLine("Расстояние не может быть отрицательным!");
+                Console.WriteLine("Расстояние не может быть отрицательным!\n");
                 return;
             }
             else
             {
                 _distance = _distance * 100;
-                Console.WriteLine("Расстояние в сантиметрах: " + _distance + " см.");
+                Console.WriteLine("Расстояние в сантиметрах: " + _distance + " см.\n");
 
             }
         }
@@ -64,13 +64,13 @@ namespace zadanie_1_1.Logic
         {
             if (_distance < 0)
             {
-                Console.WriteLine("Расстояние не может быть отрицательным!");
+                Console.WriteLine("Расстояние не может быть отрицательным!\n");
                 return;
             }
             else
             {
                 _distance = _distance / 1000;
-                Console.WriteLine("Расстояние в километрах: " + _distance + " км.");
+                Console.WriteLine("Расстояние в километрах: " + _distance + " км.\n");
             }
 
         }
