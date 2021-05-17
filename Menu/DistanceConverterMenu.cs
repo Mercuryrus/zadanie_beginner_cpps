@@ -12,19 +12,22 @@ namespace zadanie_1_1.Menu
         public static void GetDisatnceConverterMenu()
         {
             bool isContinue = true;
+           
             do
             {
                 int changeTask = 0;
+                var key = Console.ReadKey();
                 Console.Write("Выберите пункт меню:\n 0) Выход:\n 1) Ввести расстояние:\n 2) Показать введенное расстояние: \n 3) Перевести в сантиметры" +
                     "\n  4)Перевести в км: \n Все-остальное) Выдох на себя:\n");
                 string elemMenuStr = Console.ReadLine();
 
                 if (!int.TryParse(elemMenuStr, out changeTask))
-                    continue;
+                continue; Console.ReadKey(true);
 
-                if (!Enum.IsDefined(typeof(ChangeElemDistanceMenu), changeTask))
+                if (!Enum.IsDefined(typeof(ChangeElemDistanceMenu), changeTask)) { Console.ReadKey(true); }
                     continue;
-
+                                   
+                
                 switch ((ChangeElemDistanceMenu)changeTask)
                 {
                     case ChangeElemDistanceMenu.exit:
